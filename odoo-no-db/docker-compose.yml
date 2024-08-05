@@ -1,0 +1,15 @@
+services:
+  odoo:
+    platform: linux/amd64
+    image: odoo:15
+    ports:
+      - ${ODOO_PORT}:8069
+      - ${ODOO_SSH_PORT}:22
+    volumes:
+      - ./config:/etc/odoo
+      - ../addons:/mnt/extra-addons
+    environment:
+      - HOST=${DB_HOST}
+      - USER=${DB_USER}
+      - PORT=${DB_PORT}
+      - PASSWORD=${DB_PASSWORD}
