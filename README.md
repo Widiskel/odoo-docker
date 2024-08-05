@@ -8,7 +8,7 @@ This is how you can easly setup odoo using docker from docker compose file with 
 
 ## Setup
 - git clone `https://github.com/Widiskel/odoo-docker.git`
-- cd odoo-docker
+- `cd odoo-docker`
 - modify `.env` and `docker-compose.yml` file if you need a change.
 - run `docker compose up -d` to build a container from compose file
 - run `chmod +x sshsetup.sh && ./sshsetup.sh` to setup ssh on your container
